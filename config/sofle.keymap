@@ -15,6 +15,12 @@
 #define RAISE 2
 #define ADJUST 3
 
+&lt {  // layer-tap config
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+};
+
 / {
 
    // Activate ADJUST layer by pressing raise and lower
@@ -24,12 +30,6 @@
             if-layers = <LOWER RAISE>;
             then-layer = <ADJUST>;
         };
-    };
-
-    &lt {  // layer-tap config
-        flavor = "balanced";
-        tapping-term-ms = <200>;
-        quick-tap-ms = <QUICK_TAP_MS>;
     };
 
     keymap {
