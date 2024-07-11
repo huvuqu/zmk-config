@@ -1,0 +1,33 @@
+
+&lt {
+    // Increase layer tap time
+    tapping-term-ms = <300>;
+
+    // Quickly tap-tap-holding the lt button will repeat the tap behavior
+    // For example enter-enter-hold, will output multiple enter while you
+    // keep holding the key.
+    // But holding enter without double tapping, will activate the layer.
+     quick-tap-ms = <200>;
+
+     flavor = "balanced";
+};
+
+&sk {  // sticky-key config
+    release-after-ms = <900>;  // release after 0.6s
+    quick-release;             // no double capitalization when rolling keys
+};
+
+&sl {  // sticky-layer config
+    ignore-modifiers;          // allow chording sticky mods & layers
+};
+
+
+&num_word {
+    layers = <NUM_WORD>;
+    continue-list = <
+        BACKSPACE DELETE DOT COMMA
+        SLASH ASTERISK PLUS MINUS EQUAL DOLLAR
+        RS(SPACE)
+    >;
+    ignore-modifiers;  // modifiers don't deactivate the layer
+};
