@@ -13,7 +13,8 @@
 
 #include "zmk-helpers/helper.h"
 /* source key position labels */
-#include "zmk-helpers/key-labels/60.h"
+#include "includes/keypos_60keys.h"
+
 
 #define BASE 0
 #define NAV 1
