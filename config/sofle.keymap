@@ -62,9 +62,9 @@
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 
-MAKE_HRM(hml_repeat, &kp, &key_repeat, KEYS_R THUMBS)  // used for HRM-combo
-MAKE_HRM(hmr_lpar_lt, &kp, &lpar_lt, KEYS_L THUMBS)    // "    "   "   "
-MAKE_HRM(hmr_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
+// MAKE_HRM(hml_repeat, &kp, &key_repeat, KEYS_R THUMBS)  // used for HRM-combo
+// MAKE_HRM(hmr_lpar_lt, &kp, &lpar_lt, KEYS_L THUMBS)    // "    "   "   "
+// MAKE_HRM(hmr_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
 /* Nav cluster */
 / {
@@ -101,11 +101,11 @@ MAKE_HRM(hmr_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 //
 //                       ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
             bindings = <
-&kp GRAVE   &kp N1 &kp N2   &kp N3   &kp N4    &kp N5                                                              &kp N6       &kp N7    &kp N8    &kp N9   &kp N0   &none
-&kp ESC     &kp Q  &kp W    &kp E    &kp R     &kp T                                                               &kp Y        &kp U     &kp I     &kp O    &kp P    &kp BSPC
-&kp TAB     &kp A  &kp S    &kp D    &kp F     &kp G                                                               &kp H        &kp J     &kp K     &kp L    &kp SEMI &kp SQT
-&kp LSHFT   &kp Z  &kp X    &kp C    &kp V     &kp B          &kp C_MUTE                             &none         &kp N        &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-                 &kp LGUI &kp LALT &kp ESC   &lt NAV SPACE  &kp TAB                                &kp RET       &kp BSPC     &kp RSHFT &kp RALT  &kp RGUI  
+&kp GRAVE   &kp N1       &kp N2         &kp N3          &kp N4            &kp N5                                                              &kp N6       &kp N7           &kp N8           &kp N9         &kp N0        &none
+&kp ESC     &kp Q        &kp W          &kp E           &kp R             &kp T                                                               &kp Y        &kp U            &kp I            &kp O          &kp P         &kp BSPC
+&kp TAB     &hml LCMD A  &hml LALT S    &hml LCTRL D    &hml LSHIFT F     &kp G                                                               &kp H        &hmr RSHFT J     &hmr RCTRL K     &hmr RALT L    &lt RCMD SEMI &kp SQT
+&kp LSHFT   &kp Z        &kp X          &kp C           &kp V             &kp B          &kp C_MUTE                             &none         &kp N        &kp M            &kp COMMA        &kp DOT        &kp FSLH      &kp RSHFT
+                         &kp LGUI       &kp LALT        &kp ESC           &lt NAV SPACE  &kp TAB                                &kp RET       &kp BSPC     &kp RSHFT        &kp RALT         &kp RGUI  
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -138,7 +138,7 @@ MAKE_HRM(hmr_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
 // 
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-//              LCMD         LOPTION       LCRTL         LSHIFT                                                     PAGE DOWN       <-            v              ^           ->            
+//              LCMD         LOPTION       LSHIFT                                                     PAGE DOWN       <-            v              ^           ->            
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
 // 
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
