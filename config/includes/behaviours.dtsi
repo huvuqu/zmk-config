@@ -6,7 +6,7 @@
 #define TD_TAPPING_TERM 300
 / {
   behaviors {
-        lt_num_word: lt_num_word {
+        lt_nw: lt_num_word {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
