@@ -5,8 +5,47 @@
 #define HM_PRIOR_IDLE 150
 #define TD_TAPPING_TERM 300
 / {
-  behaviors {
-        lt_nw: lt_num_word {
+  behaviorsp {
+        /*
+         * Shifted Backspace deletes + Layer Tap
+         *
+         * Usage: &mm_bspc_del_layer
+         * Tap: Backspace
+         * Shift-Tap: Delete
+         * Hold: Switch layer SYM
+         */
+        bs_del_sym: bspc_del_layer {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&lt SYM BSPC>, <&kp DEL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        /*
+         * Sticky shift + Caps Word
+         *
+         * Usage: &mm_shift_caps_word_l or &mm_shift_caps_word_r
+         * Tap: Sticky shift
+         * HMR-Shift-Tap: Caps Word
+         * Double Tap: Caps Word
+         *   - The first tap activates sticky shift mod
+         *   - The second tap is now a shift + press, which activates
+         *     the mod morph
+         * Hold: Shift
+         *
+         * Credits to urob for this genius combo.
+         */
+
+        shft_cw: mm_shift_caps_word_l {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+
+            bindings = <&sk LSHFT>, <&caps_word>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        num_nw: lt_num_word {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
@@ -77,5 +116,21 @@
 
             bindings = <&mo>, <&kp>;
         };
+
+               /*
+        * Layer Toggle
+        *
+        * Usage: &ltog LGUI NAV
+        * Tap: Layer Toggle
+        * Hold: Keypress
+        */
+        ltog: ltog {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <250>;
+            bindings = <&kp>, <&tog>;
+        };
+
   };
 };

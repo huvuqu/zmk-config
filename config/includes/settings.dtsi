@@ -31,3 +31,19 @@
     >;
     ignore-modifiers;  // modifiers don't deactivate the layer
 };
+
+
+&caps_word {
+    // Allow caps word to continue even when minus or underscore
+    // are pressed.
+    // Also prevent mod presses from cancelling caps word.
+    continue-list = <
+      UNDERSCORE MINUS
+      LCTRL LALT LGUI LSHFT
+      RCTRL RALT RGUI RSHFT
+      BACKSPACE
+    >;
+    #ifdef HAS_UROB
+        /delete-property/ ignore-modifiers;
+    #endif
+};
