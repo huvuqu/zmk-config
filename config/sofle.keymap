@@ -118,13 +118,13 @@
 //╭──────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                              ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────────╮
    &trans        &trans        &trans        &trans        &trans        &trans                                       &trans        &trans        &trans        &trans        &trans          &trans
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
-   &trans        &kp LBKT      &kp N7        &kp N8        &kp N9        &kp RBKT                                     &kp RG(1)     &kp RG(2)     &kp RG(3)     &kp RG(4)     &kp RG(5)       &trans
+   &trans        &kp LBKT      &kp N7       &kp N8        &kp N9        &kp RBKT                                     &kp RG(1)     &kp RG(2)     &kp RG(3)     &kp RG(4)     &kp RG(5)       &trans
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
-   &trans        &kp LPAR      &kp N4        &kp N5        &kp N6        &kp RPAR                                     &sk HYPER     &sk RSHFT     &sk RCTRL     &sk RALT      &sk RCMD        &trans
+   &trans        &kp LPAR      &kp N4       &kp N5        &kp N6        &kp RPAR                                     &sk HYPER     &sk RSHFT     &sk RCTRL     &sk RALT      &sk RCMD        &trans
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
-   &trans        &kp GRAVE     &kp N1        &kp N2        &kp N3        &kp BSLH     &trans           &trans         &kp PRCNT     &kp PLUS      &kp MINUS     &kp STAR      &kp FSLH        &trans
+   &trans        &kp GRAVE     &kp N1       &kp N2        &kp N3        &kp N0        &trans           &trans        &kp PRCNT     &kp PLUS      &kp MINUS     &kp STAR      &kp FSLH        &trans
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
-                              &trans        &trans        &hml LCMD DOT &kp N0        &kp EQUAL        &trans        &trans        &trans        &trans        &trans
+                               &trans       &trans        &hml LCMD DOT &kp N0        &kp EQUAL        &trans        &trans        &trans        &trans        &trans
 //                           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -139,9 +139,9 @@
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
    &trans       &kp LPAR      &kp N4        &kp N5        &kp N6        &kp RPAR                                     &hmr HYPER H  &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L   &hmr RCMD SEMI  &trans
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
-   &trans       &kp GRAVE     &kp N1        &kp N2        &kp N3        &kp BSLH      &trans           &trans        &kp PRCNT     &kp PLUS      &kp MINUS     &kp STAR      &kp FSLH        &trans
+   &trans       &kp GRAVE     &kp N1        &kp N2        &kp N3        &kp N0        &trans           &trans        &kp PRCNT     &kp PLUS      &kp MINUS     &kp STAR      &kp FSLH        &trans
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
-                              &trans        &trans        &kp DOT       &kp N0        &kp EQUAL        &trans        &trans        &trans        &trans        &trans
+                              &trans        &trans        &kp DOT       &trans        &kp EQUAL        &trans        &trans        &trans        &trans        &trans
 //                           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
