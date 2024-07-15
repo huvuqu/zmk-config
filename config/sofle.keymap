@@ -84,14 +84,13 @@
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
    &kp TAB       &kp Q         &kp W         &kp E        &kp R         &kp T                                        &kp Y         &kp U         &kp I         &kp O         &kp P           &kp LBKT
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
-   &hml HYPER ESC &hml LCMD A  &hml LALT S   &hml LCTRL D &hml LSHIFT F &hml HYPER G                                 &hmr HYPER H  &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L   &hmr RGUI SEMI  &kp SQT
+   &hml HYPER ESC &hml LSHIFT A &hml LALT S   &hml LCTRL D &hml LCMD F  &hml HYPER G                                 &hml HYPER H  &hmr RCMD J   &hmr RCTRL K  &hmr RALT L   &hmr RSHFT      &kp SQT
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
-   &shft_cw     &kp Z         &kp X         &kp C         &kp V         &kp B         &kp C_MUTE       &none         &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH        &shft_cw
+   &shft_cw     &kp Z         &kp X         &kp C         &hml MEH V    &kp B         &kp C_MUTE       &none         &kp N         &hmr MEH M    &kp COMMA     &kp DOT       &kp FSLH        &shft_cw
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
                                &kp LC(SPACE) &sk HYPER    &hml LCMD ESC &lt NAV SPACE &hml LCTRL TAB  &hmr RCMD RET  &bs_del_sym  &num_nw NUM NUM &sk RCTRL   &lt FUN RG(SPACE)  
 //                           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
             >;
-
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
  
@@ -103,9 +102,9 @@
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
    &trans       &kp LA(Q)     &kp LA(W)     &kp LA(E)     &kp LA(R)     &kp LA(T)                                    &kp LA(Y)     &kp LA(U)     &kp LA(I)     &kp LA(O)     &kp LA(P)       &trans
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
-   &kp LA(ESC)  &sk LCMD      &sk LALT      &sk LCTRL     &sk LSHFT     &sk HYPER                                    &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp LA(SEMI)    &kp LA(SQT)
+   &kp LA(ESC)  &sk LSHIFT    &sk LALT      &sk LCTRL     &sk LCMD      &sk HYPER                                    &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp LA(SEMI)    &kp LA(SQT)
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
-   &kp LS(LG(Z)) &kp LG(Z)     &kp LG(X)    &kp LG(C)     &kp LG(V)     &kp LA(B)     &trans           &trans        &kp END       &kp PG_DN     &kp PG_UP     &kp HOME      &kp LA(FSLH)    &trans
+   &kp LS(LG(Z)) &kp LG(Z)     &kp LG(X)    &kp LG(C)     &sk MEH       &kp LA(B)     &trans           &trans        &kp END       &kp PG_DN     &kp PG_UP     &kp HOME      &kp LA(FSLH)    &trans
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
                               &trans        &trans        &trans        &trans        &trans           &trans        &trans        &trans        &trans        &trans
 //                           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
@@ -120,11 +119,11 @@
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
    &trans        &kp LBKT      &kp N7       &kp N8        &kp N9        &kp RBKT                                     &kp RG(1)     &kp RG(2)     &kp RG(3)     &kp RG(4)     &kp RG(5)       &trans
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
-   &trans        &kp LPAR      &kp N4       &kp N5        &kp N6        &kp RPAR                                     &sk HYPER     &sk RSHFT     &sk RCTRL     &sk RALT      &sk RCMD        &trans
+   &trans        &kp LPAR      &kp N4       &kp N5        &kp N6        &kp RPAR                                     &sk HYPER     &sk RCMD      &sk RCTRL     &sk RALT      &sk RSHFT       &trans
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
-   &trans        &kp GRAVE     &kp N1       &kp N2        &kp N3        &kp N0        &trans           &trans        &kp PRCNT     &kp PLUS      &kp MINUS     &kp STAR      &kp FSLH        &trans
+   &trans        &kp LT        &kp N1       &kp N2        &kp N3        &kp GT        &trans           &trans        &kp PRCNT     &kp PLUS      &kp MINUS     &kp STAR      &kp FSLH        &trans
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
-                               &trans       &trans        &hml LCMD DOT &trans        &kp EQUAL        &trans        &trans        &trans        &trans        &trans
+                               &trans       &kp N0        &hml LCMD DOT &hml LALT SPACE &hml LCTRL EQUAL &trans        &trans        &trans        &trans        &trans
 //                           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -133,15 +132,15 @@
             display-name = "num word";
             bindings = <
 //╭──────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                              ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────────╮
-   &trans       &trans        &trans        &trans        &trans        &trans                                       &trans        &trans        &trans        &trans        &trans          &trans
+   &trans        &trans        &trans        &trans        &trans        &trans                                       &trans        &trans        &trans        &trans        &trans          &trans
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
-   &trans       &kp LBKT      &kp N7        &kp N8        &kp N9        &kp RBKT                                     &trans        &trans        &trans        &trans        &trans          &trans
+   &trans        &kp LBKT      &kp N7       &kp N8        &kp N9        &kp RBKT                                     &kp RG(1)     &kp RG(2)     &kp RG(3)     &kp RG(4)     &kp RG(5)       &trans
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
-   &trans       &kp LPAR      &kp N4        &kp N5        &kp N6        &kp RPAR                                     &hmr HYPER H  &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L   &hmr RCMD SEMI  &trans
+   &trans        &kp LPAR      &kp N4       &kp N5        &kp N6        &kp RPAR                                     &sk HYPER     &sk RCMD      &sk RCTRL     &sk RALT      &sk RSHFT       &trans
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
-   &trans       &kp GRAVE     &kp N1        &kp N2        &kp N3        &kp N0        &trans           &trans        &kp PRCNT     &kp PLUS      &kp MINUS     &kp STAR      &kp FSLH        &trans
+   &trans        &kp LT        &kp N1       &kp N2        &kp N3        &kp GT        &trans           &trans        &kp PRCNT     &kp PLUS      &kp MINUS     &kp STAR      &kp FSLH        &trans
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
-                              &trans        &trans        &hml LCMD DOT &trans        &kp EQUAL        &trans        &trans        &trans        &trans        &trans
+                               &trans       &kp N0        &hml LCMD DOT &hml LALT SPACE &hml LCTRL EQUAL  &trans        &trans        &trans        &trans        &trans
 //                           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -154,7 +153,7 @@
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
    &trans       &kp BSLH      &kp EXCL      &kp LBKT      &kp RBKT      &kp AT                                       &trans        &trans        &trans        &trans        &trans          &trans
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
-   &trans       &kp CARET     &kp AMPS      &kp LBRC      &kp RBRC      &kp HASH                                     &sk HYPER     &sk RSHFT     &sk RCTRL     &sk RALT      &sk RCMD        &trans
+   &trans       &kp CARET     &kp AMPS      &kp LBRC      &kp RBRC      &kp HASH                                     &sk HYPER     &sk RCMD     &sk RCTRL     &sk RALT      &sk RSHFT        &trans
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
    &trans       &kp TILDE     &kp PIPE      &kp LPAR      &kp RPAR      &kp DLLR      &trans           &trans        &kp PRCNT     &kp PLUS      &kp MINUS     &kp STAR      &kp FSLH        &trans
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
@@ -172,7 +171,7 @@
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
    &trans       &trans        &kp F7        &kp F8        &kp F9        &kp F10                                      &trans        &trans        &trans        &trans        &trans          &trans
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
-   &trans       &trans        &kp F4        &kp F5        &kp F6        &kp F11                                      &sk HYPER     &sk RSHFT     &sk RCTRL     &sk RALT      &sk RCMD        &trans
+   &trans       &trans        &kp F4        &kp F5        &kp F6        &kp F11                                      &sk HYPER     &sk RCMD     &sk RCTRL     &sk RALT      &sk RSHFT        &trans
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
    &trans       &trans        &kp F1        &kp F2        &kp F3        &kp F12       &trans           &trans        &trans        &trans        &trans        &trans        &trans          &trans
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
