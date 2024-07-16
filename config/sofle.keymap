@@ -62,7 +62,7 @@
 /* Nav cluster */
 / {
 
-   Activate ADJUST layer by pressing raise and lower
+   // Activate ADJUST layer by pressing raise and lower
     conditional_layers {
         compatible = "zmk,conditional-layers";
         adjust_layer {
@@ -259,7 +259,7 @@
 //╭──────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                              ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────────╮
    &trans       &trans        &trans        &trans        &trans        &trans                                       &trans        &trans        &trans        &trans        &trans          &trans
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
-   &trans       &kp BSLH      &kp EXCL      &kp LBKT      &kp RBKT      &kp AT                                       &kp RG(1)     &kp RG(2)     &kp RG(3)     &kp RG(4)     &kp RG(5)          &trans
+   &trans       &kp BSLH      &kp EXCL      &kp LBKT      &kp RBKT      &kp AT                                       &kp RA(1)     &kp RA(2)     &kp RA(3)     &kp RA(4)     &kp RA(5)          &trans
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
    &trans       &kp CARET     &kp AMPS      &kp LBRC      &kp RBRC      &kp HASH                                     &sk HYPER     &sk RCMD     &sk RCTRL     &sk RALT      &sk RSHFT        &trans
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
