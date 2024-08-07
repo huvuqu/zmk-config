@@ -11,16 +11,19 @@
 #define NUM_WORD 3
 #define FUN 4
 #define ADJUST 5
+#define BASE_NOT_HRM 6
 
 // HYPER and MEH define
 #define HYPER LS(LC(LG(LALT)))
 #define MEH LC(LG(LALT))
 
 // Left magic key
-#define LMK LS(LC(LG(LA(AT))))
-#define RMK LS(LC(LG(LA(PIPE))))
-#define LMK_ LS(LC(LG(LA(CARET))))
-#define RMK_ LS(LC(LG(LA(DLLR))))
+#define LMK LS(LC(LG(LA(N0))))
+#define LMK1 LS(LC(LG(LA(N1))))
+#define LMK2 LS(LC(LG(LA(N2))))
+#define RMK LS(LC(LG(LA(N3))))
+#define RMK1 LS(LC(LG(LA(N4))))
+#define RMK2 LS(LC(LG(LA(N5))))
 
 #define SPOTLIGHT LG(SPACE)
 
@@ -79,69 +82,126 @@
   ╰───────╮ 50  51  52  53  54 │ 55  56  57  58  59 ╭───────╯ ╰───────╮ LH4 LH3 LH2 LH1 LH0 │ RH0 RH1 RH2 RH3 RH4 ╭───────╯
           ╰────────────────────┴────────────────────╯                 ╰─────────────────────┴─────────────────────╯         */
         compatible = "zmk,combos";
-         
+    
+        combo_tog_base_no_hrm {
+          timeout-ms = <COMBO_TERM_SLOW>;
+          require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+          key-positions = <38 39 40>;
+          layers = <BASE NAV NUM NUM_WORD BASE_NOT_HRM>;
+          bindings = <&tog BASE_NOT_HRM>;
+        };
+
         cb_tab {
           timeout-ms = <COMBO_TERM_FAST>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
           key-positions = <14 15>;
-          layers = <BASE NAV NUM>;
+          layers = <BASE NAV NUM NUM_WORD BASE_NOT_HRM>;
           bindings = <&kp TAB>;
+        };
+        cb_spotlight {
+          timeout-ms = <COMBO_TERM_FAST>;
+          require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+          key-positions = <26 27 28>;
+          layers = <BASE BASE_NOT_HRM>;
+          bindings = <&kp LG(SPACE)>;
         };
         cb_changeinputsource {
           timeout-ms = <COMBO_TERM_FAST>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
           key-positions = <15 16>;
-          layers = <BASE NAV NUM>;
+          layers = <BASE NAV NUM NUM_WORD BASE_NOT_HRM>;
           bindings = <&kp LC(SPACE)>;
+        };
+        cb_changeinputsource_en {
+          timeout-ms = <COMBO_TERM_FAST>;
+          require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+          key-positions = <15 28>;
+          layers = <BASE NAV NUM>;
+          bindings = <&kp LS(LC(LG(LA(E))))>;
+        };
+        cb_changeinputsource_vi {
+          timeout-ms = <COMBO_TERM_FAST>;
+          require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+          key-positions = <27 40>;
+          layers = <BASE NAV NUM NUM_WORD BASE_NOT_HRM>;
+          bindings = <&kp LS(LC(LG(LA(V))))>;
         };
         cb_esc {
           timeout-ms = <COMBO_TERM_FAST>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
           key-positions = <28 29>;
-          layers = <BASE NAV NUM>;
+          layers = <BASE NAV NUM NUM_WORD BASE_NOT_HRM>;
           bindings = <&kp ESC>;
         };
-        cb_cmdv {
+        cb_close {
+          timeout-ms = <COMBO_TERM_FAST>;
+          require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+          key-positions = <13 14>;
+          layers = <BASE NAV NUM NUM_WORD BASE_NOT_HRM>;
+          bindings = <&kp LG(W)>;
+        };
+        cb_new {
+          timeout-ms = <COMBO_TERM_FAST>;
+          require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+          key-positions = <16 17>;
+          layers = <BASE NAV NUM NUM_WORD BASE_NOT_HRM>;
+          bindings = <&kp LG(T)>;
+        };
+        cb_paste {
           timeout-ms = <COMBO_TERM_FAST>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
           key-positions = <40 41>;
-          layers = <BASE NUM NUM_WORD>;
+          layers = <BASE NAV NUM NUM_WORD BASE_NOT_HRM>;
           bindings = <&kp LG(V)>;
         };
-        cb_cmdc {
+        cb_copy {
           timeout-ms = <COMBO_TERM_FAST>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
           key-positions = <39 40>;
-          layers = <BASE NUM NUM_WORD>;
+          layers = <BASE NAV NUM NUM_WORD BASE_NOT_HRM>;
           bindings = <&kp LG(C)>;
         };
-        cb_cmdx {
+        cb_cut {
           timeout-ms = <COMBO_TERM_FAST>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
           key-positions = <38 39>;
-          layers = <BASE NUM NUM_WORD>;
+          layers = <BASE NAV NUM NUM_WORD BASE_NOT_HRM>;
           bindings = <&kp LG(X)>;
         };
-        cb_cmdz {
+        cb_undo {
           timeout-ms = <COMBO_TERM_FAST>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
           key-positions = <37 38>;
-          layers = <BASE NUM NUM_WORD>;
+          layers = <BASE NAV NUM NUM_WORD BASE_NOT_HRM>;
           bindings = <&kp LG(Z)>;
+        };
+        cb_redo {
+          timeout-ms = <COMBO_TERM_FAST>;
+          require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+          key-positions = <25 37>;
+          layers = <BASE NAV NUM NUM_WORD BASE_NOT_HRM>;
+          bindings = <&kp LG(LS(Z))>;
         };
         cb_cmda {
           timeout-ms = <COMBO_TERM_FAST>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
           key-positions = <25 26>;
-          layers = <BASE NUM NUM_WORD>;
+          layers = <BASE NAV NUM NUM_WORD BASE_NOT_HRM>;
           bindings = <&kp LG(A)>;
         };
-        cb_optionbackspace {
+        cb_optbackspace {
           timeout-ms = <COMBO_TERM_FAST>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
           key-positions = <33 34>;
-          layers = <BASE NUM NUM_WORD>;
+          layers = <BASE NAV NUM NUM_WORD BASE_NOT_HRM>;
           bindings = <&kp LA(BSPC)>;
+        };
+        cb_cmdbackspace {
+          timeout-ms = <COMBO_TERM_FAST>;
+          require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+          key-positions = <34 48>;
+          layers = <BASE NAV NUM NUM_WORD BASE_NOT_HRM>;
+          bindings = <&kp RG(BSPC)>;
         };
 
 /*                                      60 KEY MATRIX / LAYOUT MAPPING
@@ -215,14 +275,14 @@
         cb_caret {
           timeout-ms = <COMBO_TERM_FAST>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-          key-positions = <25 37>;
+          key-positions = <18 30>;
           layers = <BASE NUM NUM_WORD>;
           bindings = <&kp CARET>;
         };
         cb_dollar {
           timeout-ms = <COMBO_TERM_FAST>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-          key-positions = <34 48>;
+          key-positions = <21 33>;
           layers = <BASE NUM NUM_WORD>;
           bindings = <&kp DLLR>;
         };
@@ -300,14 +360,14 @@
         cb_dqt { 
           timeout-ms = <COMBO_TERM_FAST>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-          key-positions = <20 31>;
+          key-positions = <19 31>;
           layers = <BASE NUM NUM_WORD>;
           bindings = <&kp DQT>;
         };
         cb_under { 
           timeout-ms = <COMBO_TERM_FAST>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-          key-positions = <46 31>;
+          key-positions = <20 32>;
           layers = <BASE NUM NUM_WORD>;
           bindings = <&kp UNDER>;
         };
@@ -381,13 +441,13 @@
 //╭──────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                              ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────────╮
    &kp GRAVE     &kp N1        &kp N2        &kp N3       &kp N4        &kp N5                                       &kp N6        &kp N7        &kp N8        &kp N9        &kp N0          &kp BSPC
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
-   &kp ESC       &kp Q         &kp W         &kp E        &kp R         &kp T                                        &kp Y         &kp U         &kp I         &kp O         &kp P           &kp BSLH
+   &kp TAB       &kp Q         &kp W         &kp E        &kp R         &kp T                                        &kp Y         &kp U         &kp I         &kp O         &kp P           &kp BSLH
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
-   &kp TAB       &hml LSHIFT A &hml LALT S   &hml LCTRL D &hml LCMD F  &hml HYPER G                                 &hml HYPER H  &hmr RCMD J   &hmr RCTRL K  &hmr RALT L   &hmr RSHFT BSPC &kp SQT
+   &kp ESC       &hml LSHIFT A &hml LALT S   &hml LCTRL D &hml LCMD F  &hml HYPER G                                 &hmr HYPER H  &hmr RCMD J   &hmr RCTRL K  &hmr RALT L   &hmr RSHFT BSPC &kp SQT
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
-   &shft_cw     &kp Z         &kp X         &kp C         &hml MEH V    &kp B         &kp C_MUTE       &none         &kp N         &hmr MEH M    &kp COMMA     &kp DOT       &kp FSLH        &shft_cw
+   &kp LMK     &kp Z         &kp X         &kp C         &hml MEH V    &kp B         &kp C_MUTE       &none         &kp N         &hmr MEH M    &kp COMMA     &kp DOT       &kp FSLH        &kp RMK
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
-                              &kp LMK       &kp LMK_      &mt LCMD SPOTLIGHT &lt NAV SPACE &mt HYPER  RET      &num_nw NUM NUM &shft_cw    &lt FUN BSPC  &lt ADJUST RMK_ &kp RMK      
+                              &mt LCTRL LMK2 &mt LALT LMK1 &mt LCMD SPOTLIGHT &lt NAV SPACE &mt HYPER  RET      &num_nw NUM NUM &shft_cw    &lt FUN BSPC  &lt ADJUST RMK1 &mt MEH RMK2
 //                           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -436,7 +496,7 @@
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
    &trans        &trans        &kp N7       &kp N8        &kp N9        &trans                                       &trans        &trans     &trans        &trans        &trans          &trans
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
-   &trans        &trans        &kp N4       &kp N5        &kp N6        &trans                                      &sk HYPER     &sk RCMD      &sk RCTRL     &sk RALT      &sk RSHFT       &trans
+   &trans        &trans        &kp N4       &kp N5        &kp N6        &trans                                      &hmr HYPER H   &hmr RCMD J  &hmr RCTRL K  &hmr RALT L   &hmr RSHFT BSPC &trans
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
    &trans        &trans        &kp N1       &kp N2        &kp N3        &kp N0        &trans           &trans        &trans        &trans        &trans       &trans         &trans        &trans
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
@@ -457,7 +517,7 @@
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
    &trans       &trans        &kp F1        &kp F2        &kp F3        &kp F12       &trans           &trans        &trans        &trans        &trans        &trans        &trans          &trans
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
-                              &trans        &trans        &ltog LCMD FUN &trans        &trans           &trans        &trans        &trans        &trans        &trans
+                              &trans        &trans        &ltog LCMD FUN  &trans        &trans           &trans        &trans        &trans        &trans        &trans
 //                           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -475,6 +535,29 @@
    &none        &none         &none         &none         &none         &none         &rgb_ug RGB_TOG  &none         &none         &none         &none         &none         &none           &none
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
                               &none         &none         &none         &none         &none            &none         &none         &none         &none         &none
+//                           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+            >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+        base_no_hrm_layer {
+            display-name = "base no hrm";
+// ------------------------------------------------------------------------------------------------------------
+// |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |       |
+// |  ESC  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
+// |  TAB  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+// | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+//               | GUI | ALT  | ESC | SPACE |  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
+            bindings = <
+//╭──────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                              ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────────╮
+   &kp GRAVE     &kp N1        &kp N2        &kp N3       &kp N4        &kp N5                                       &kp N6        &kp N7        &kp N8        &kp N9        &kp N0          &kp BSPC
+//├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
+   &kp TAB       &kp Q         &kp W         &kp E        &kp R         &kp T                                        &kp Y         &kp U         &kp I         &kp O         &kp P           &kp BSLH
+//├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
+   &kp ESC       &kp A         &kp S        &kp D &kp F  &kp G                                 &kp H  &kp J   &kp K  &kp L   &kp BSPC &kp SQT
+//├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
+   &kp LMK     &kp Z         &kp X         &kp C         &kp V    &kp B         &kp C_MUTE       &none         &kp N         &hmr MEH M    &kp COMMA     &kp DOT       &kp FSLH        &kp RMK
+//├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
+                              &mt LCTRL LMK2 &mt LALT LMK1 &ltog LCMD BASE_NOT_HRM &lt NAV SPACE &mt HYPER  RET      &num_nw NUM NUM &shft_cw    &lt FUN BSPC  &lt ADJUST RMK1 &mt MEH RMK2
 //                           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
