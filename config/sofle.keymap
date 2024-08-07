@@ -99,7 +99,7 @@
           bindings = <&kp TAB>;
         };
         cb_spotlight {
-          timeout-ms = <COMBO_TERM_FAST>;
+          timeout-ms = <COMBO_TERM_SLOW>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
           key-positions = <26 27 28>;
           layers = <BASE BASE_NOT_HRM>;
@@ -447,7 +447,7 @@
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
    &kp LMK     &kp Z         &kp X         &kp C         &hml MEH V    &kp B         &kp C_MUTE       &none         &kp N         &hmr MEH M    &kp COMMA     &kp DOT       &kp FSLH        &kp RMK
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
-                              &mt LCTRL LMK2 &mt LALT LMK1 &mt LCMD SPOTLIGHT &lt NAV SPACE &mt HYPER  RET      &num_nw NUM NUM &shft_cw    &lt FUN BSPC  &lt ADJUST RMK1 &mt MEH RMK2
+                              &mt LCTRL LMK2 &mt LALT LMK1 &mt LCMD SPOTLIGHT &lt NAV SPACE &mt HYPER  RET      &num_nw NUM NUM &shft_cw    &lt FUN SPOTLIGHT  &lt ADJUST RMK1 &mt MEH RMK2
 //                           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
