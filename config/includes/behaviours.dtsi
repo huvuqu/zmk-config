@@ -5,22 +5,7 @@
 #define HM_PRIOR_IDLE 150
 #define TD_TAPPING_TERM 300
 / {
-  behaviorsp {
-        /*
-         * Shifted Backspace deletes + Layer Tap
-         *
-         * Usage: &mm_bspc_del_layer
-         * Tap: Backspace
-         * Shift-Tap: Delete
-         * Hold: Switch layer SYM
-         */
-        bs_del_sym: bspc_del_layer {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&lt SYM BSPC>, <&kp DEL>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
+  behaviors {
         /*
          * Sticky shift + Caps Word
          *
