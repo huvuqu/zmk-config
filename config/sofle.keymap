@@ -14,7 +14,7 @@
 #define BASE_NOT_HRM 6
 
 // HYPER and MEH define
-#define HYPER RS(RC(RG(RALT)))
+#define HYPER RS(RC(RG(LALT)))
 #define MEH LC(LG(LALT))
 
 // Left magic key
