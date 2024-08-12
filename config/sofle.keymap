@@ -18,12 +18,12 @@
 #define MEH LC(LG(LALT))
 
 // Left magic key
-#define LMK LS(LC(LG(LA(N0))))
-#define LMK1 LS(LC(LG(LA(N1))))
-#define LMK2 LS(LC(LG(LA(N2))))
-#define RMK LS(LC(LG(LA(N3))))
-#define RMK1 LS(LC(LG(LA(N4))))
-#define RMK2 LS(LC(LG(LA(N5))))
+#define LMK LS(LC(LG(LA(F15))))
+#define LMK1 LS(LC(LG(LA(F16))))
+#define LMK2 LS(LC(LG(LA(F17))))
+#define RMK LS(LC(LG(LA(F18))))
+#define RMK1 LS(LC(LG(LA(F19))))
+#define RMK2 LS(LC(LG(LA(F20))))
 
 #define SPOTLIGHT LG(SPACE)
 
@@ -101,17 +101,17 @@
         cb_spotlight {
           timeout-ms = <COMBO_TERM_SLOW>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-          key-positions = <26 27 28>;
+          key-positions = <15 16>;
           layers = <BASE BASE_NOT_HRM>;
           bindings = <&kp LG(SPACE)>;
         };
-        cb_changeinputsource {
-          timeout-ms = <COMBO_TERM_FAST>;
-          require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-          key-positions = <15 16>;
-          layers = <BASE NAV NUM NUM_WORD BASE_NOT_HRM>;
-          bindings = <&kp LC(SPACE)>;
-        };
+        // cb_changeinputsource {
+        //   timeout-ms = <COMBO_TERM_FAST>;
+        //   require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+        //   key-positions = <15 16>;
+        //   layers = <BASE NAV NUM NUM_WORD BASE_NOT_HRM>;
+        //   bindings = <&kp LC(SPACE)>;
+        // };
         cb_changeinputsource_en {
           timeout-ms = <COMBO_TERM_FAST>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
@@ -150,24 +150,24 @@
         cb_paste {
           timeout-ms = <COMBO_TERM_FAST>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-          key-positions = <40 41>;
+          key-positions = <39 40>;
           layers = <BASE NAV NUM NUM_WORD BASE_NOT_HRM>;
           bindings = <&kp LG(V)>;
         };
         cb_copy {
           timeout-ms = <COMBO_TERM_FAST>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-          key-positions = <39 40>;
+          key-positions = <38 39>;
           layers = <BASE NAV NUM NUM_WORD BASE_NOT_HRM>;
           bindings = <&kp LG(C)>;
         };
-        cb_cut {
-          timeout-ms = <COMBO_TERM_FAST>;
-          require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-          key-positions = <38 39>;
-          layers = <BASE NAV NUM NUM_WORD BASE_NOT_HRM>;
-          bindings = <&kp LG(X)>;
-        };
+        // cb_cut {
+        //   timeout-ms = <COMBO_TERM_FAST>;
+        //   require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+        //   key-positions = <38 39>;
+        //   layers = <BASE NAV NUM NUM_WORD BASE_NOT_HRM>;
+        //   bindings = <&kp LG(X)>;
+        // };
         cb_undo {
           timeout-ms = <COMBO_TERM_FAST>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
@@ -182,13 +182,13 @@
           layers = <BASE NAV NUM NUM_WORD BASE_NOT_HRM>;
           bindings = <&kp LG(LS(Z))>;
         };
-        cb_cmda {
-          timeout-ms = <COMBO_TERM_FAST>;
-          require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-          key-positions = <25 26>;
-          layers = <BASE NAV NUM NUM_WORD BASE_NOT_HRM>;
-          bindings = <&kp LG(A)>;
-        };
+        // cb_cmda {
+        //   timeout-ms = <COMBO_TERM_FAST>;
+        //   require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+        //   key-positions = <25 26>;
+        //   layers = <BASE NAV NUM NUM_WORD BASE_NOT_HRM>;
+        //   bindings = <&kp LG(A)>;
+        // };
         cb_optbackspace {
           timeout-ms = <COMBO_TERM_FAST>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
