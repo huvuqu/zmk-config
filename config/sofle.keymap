@@ -343,14 +343,14 @@
         cb_semi {
           timeout-ms = <COMBO_TERM_FAST>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-          key-positions = <21 22>;
+          key-positions = <32 45>;
           layers = <BASE NUM NUM_WORD>;
           bindings = <&kp SEMI>;
         };
         cb_colon { 
           timeout-ms = <COMBO_TERM_FAST>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-          key-positions = <47 48>;
+          key-positions = <20 31>;
           layers = <BASE NUM NUM_WORD>;
           bindings = <&kp COLON>;
         };
@@ -455,7 +455,7 @@
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
    &trans       &kp LA(Q)     &kp LA(W)     &kp LA(E)     &kp LA(R)     &kp LA(T)                                    &kp LA(Y)     &kp LA(U)     &kp LA(I)     &kp LA(O)     &kp LA(P)       &trans
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                              ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
-   &kp LA(TAB)  &sk LSHIFT    &sk LALT      &sk LCTRL     &sk LCMD      &sk HYPER                                    &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp LA(BSPC)    &kp LA(SQT)
+   &kp LA(TAB)  &hml LSHIFT LA(A) &hml LALT LA(S) &hml LCTRL LA(D) &hml LCMD LA(F) &hml HYPER LA(G)                  &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp LA(BSPC)    &kp LA(SQT)
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
    &trans       &kp LA(Z)     &kp LA(X)    &kp LA(C)      &kp LA(V)     &kp LA(B)         &trans           &trans        &kp END       &kp PG_DN     &kp PG_UP     &kp HOME      &kp LA(FSLH)    &trans
 //├──────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────────┤
