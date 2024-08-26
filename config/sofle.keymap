@@ -98,13 +98,13 @@
           layers = <BASE NAV NUM NUM_WORD BASE_NOT_HRM>;
           bindings = <&kp TAB>;
         };
-        cb_spotlight {
-          timeout-ms = <COMBO_TERM_SLOW>;
-          require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-          key-positions = <15 16>;
-          layers = <BASE BASE_NOT_HRM>;
-          bindings = <&kp LG(SPACE)>;
-        };
+        // cb_spotlight {
+        //   timeout-ms = <COMBO_TERM_SLOW>;
+        //   require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+        //   key-positions = <15 16>;
+        //   layers = <BASE BASE_NOT_HRM>;
+        //   bindings = <&kp LG(SPACE)>;
+        // };
         // cb_changeinputsource {
         //   timeout-ms = <COMBO_TERM_FAST>;
         //   require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
@@ -117,14 +117,14 @@
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
           key-positions = <15 28>;
           layers = <BASE NAV NUM>;
-          bindings = <&kp LS(LC(LG(LA(E))))>;
+          bindings = <&kp LC(LG(LA(E)))>;
         };
         cb_changeinputsource_vi {
           timeout-ms = <COMBO_TERM_FAST>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
           key-positions = <27 40>;
           layers = <BASE NAV NUM NUM_WORD BASE_NOT_HRM>;
-          bindings = <&kp LS(LC(LG(LA(V))))>;
+          bindings = <&kp LC(LG(LA(V)))>;
         };
         cb_esc {
           timeout-ms = <COMBO_TERM_FAST>;
@@ -140,13 +140,12 @@
           layers = <BASE NAV NUM NUM_WORD BASE_NOT_HRM>;
           bindings = <&kp LG(W)>;
         };
-        cb_new {
-          timeout-ms = <COMBO_TERM_FAST>;
-          require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-          key-positions = <16 17>;
-          layers = <BASE NAV NUM NUM_WORD BASE_NOT_HRM>;
-          bindings = <&kp LG(T)>;
-        };
+        // cb_new { timeout-ms = <COMBO_TERM_FAST>;
+        //   require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+        //   key-positions = <16 17>;
+        //   layers = <BASE NAV NUM NUM_WORD BASE_NOT_HRM>;
+        //   bindings = <&kp LG(T)>;
+        // };
         cb_paste {
           timeout-ms = <COMBO_TERM_FAST>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
